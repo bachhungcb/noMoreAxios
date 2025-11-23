@@ -1,0 +1,153 @@
+﻿/* style.css - Modern Theme */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Nền Gradient tím */
+    margin: 0;
+    padding: 40px 0;
+    min-height: 100vh;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px; /* Bo tròn góc */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #4a4a4a;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* Toolbar */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+input[type="text"], input[type="email"] {
+    padding: 10px 15px;
+    width: 300px;
+    border: 2px solid #eee;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #764ba2;
+}
+
+/* Buttons chung */
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: transform 0.1s, box-shadow 0.2s;
+}
+button:active { transform: scale(0.98); }
+
+/* Nút Add New */
+.toolbar button {
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3);
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #666;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #eee;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    color: #444;
+}
+
+tr:hover { background-color: #f9f9f9; }
+
+/* Action Buttons */
+.btn-edit {
+    background-color: #fff;
+    border: 1px solid #667eea;
+    color: #667eea;
+    margin-right: 8px;
+}
+.btn-edit:hover { background-color: #667eea; color: white; }
+
+.btn-delete {
+    background-color: #fff;
+    border: 1px solid #ff6b6b;
+    color: #ff6b6b;
+}
+.btn-delete:hover { background-color: #ff6b6b; color: white; }
+
+/* Pagination */
+.pagination { margin-top: 30px; text-align: center; }
+.pagination button {
+    background-color: white;
+    border: 1px solid #ddd;
+    color: #333;
+}
+.pagination button:hover { background-color: #eee; }
+.pagination span { margin: 0 15px; color: #666; }
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.6); /* Màu nền mờ tối hơn */
+    backdrop-filter: blur(3px); /* Hiệu ứng làm mờ nền phía sau */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #555; }
+.form-group input { width: 100%; box-sizing: border-box; }
+
+#saveBtn {
+    width: 100%;
+    background: #764ba2;
+    color: white;
+    margin-top: 10px;
+}
+.close { float: right; font-size: 24px; cursor: pointer; color: #999; }
+.close:hover { color: #333; }

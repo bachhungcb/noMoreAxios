@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> NoMoreAXIOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>NoMoreAxios</h1>
+
+    <div class="toolbar">
+        <label for="searchInput"></label><input type="text" id="searchInput" placeholder="Search by name...."
+                                                onkeyup="handleSearch()">
+        <button onclick="openModal('create')">Add New User</button>
+    </div>
+
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody id="userTableBody">
+
+        </tbody>
+    </table>
+
+    <div class="pagination">
+        <button onclick="prevPage()">Previous</button>
+        <span id="pageIndicator">Page 1</span>
+        <button onclick="nextPage()">Next</button>
+    </div>
+</div>
+
+<div id="userModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle">User Info</h2>
+        <form id="userForm">
+            <input type="hidden" id="userId">
+            <div calss="form-group">
+                <label>Name:</label>
+                <input type="text" id="userName" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" id="userEmail" required>
+            </div>
+
+            <div>
+                <label>Phone:</label>
+                <input type="text" id="userPhone" required>
+            </div>
+            <button type="submit" id="saveBtn">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
